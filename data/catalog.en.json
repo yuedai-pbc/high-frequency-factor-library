@@ -1,0 +1,129 @@
+[
+  {
+    "id": "same_slot_momentum",
+    "name": "Same-slot momentum",
+    "category": "Session returns",
+    "formula": "mean(r[d-k, slot]), k=1..lookback, using the same slot on prior trading days only.",
+    "logic": "Recurring trading demand may create persistent slot-specific pressure.",
+    "status": "Research definition documented",
+    "refs": [
+      "hks"
+    ],
+    "frequency": "30 minutes",
+    "source": "User-supplied chapter 4 and preceding research summary",
+    "caveat": "No future intraday observations may enter formation."
+  },
+  {
+    "id": "cross_slot_reversal",
+    "name": "Cross-slot reversal",
+    "category": "Session returns",
+    "formula": "Use completed-slot returns to test whether subsequent different-slot returns reverse.",
+    "logic": "Temporary pressure may dissipate as investor groups change.",
+    "status": "Research definition documented",
+    "refs": [
+      "hks",
+      "lou"
+    ],
+    "frequency": "30 minutes",
+    "source": "",
+    "caveat": "Respect session boundaries and the next executable price."
+  },
+  {
+    "id": "intraday",
+    "name": "Intraday return",
+    "category": "Session returns",
+    "formula": "C_t/O_t-1; compound monthly as product(1+r_intraday)-1.",
+    "logic": "Separates price formation during continuous trading.",
+    "status": "Example implemented",
+    "refs": [
+      "lou"
+    ],
+    "frequency": "Daily to monthly",
+    "source": "",
+    "caveat": "Use consistently adjusted prices."
+  },
+  {
+    "id": "overnight",
+    "name": "Overnight return",
+    "category": "Session returns",
+    "formula": "O_t/C_(t-1)-1.",
+    "logic": "Measures information and repricing from close to next open.",
+    "status": "Example implemented",
+    "refs": [
+      "lou"
+    ],
+    "frequency": "Daily to monthly",
+    "source": "",
+    "caveat": "Use consistent corporate-action adjustments."
+  },
+  {
+    "id": "tug_of_war",
+    "name": "Intraday-minus-overnight return",
+    "category": "Session returns",
+    "formula": "Monthly compounded intraday return minus monthly compounded overnight return.",
+    "logic": "Tests divergence across sessions and associated trading frictions.",
+    "status": "Example implemented",
+    "refs": [
+      "lou"
+    ],
+    "frequency": "Monthly",
+    "source": "",
+    "caveat": "This is not the total monthly return."
+  },
+  {
+    "id": "at_proxy",
+    "name": "Algorithmic-trading activity proxy",
+    "category": "Order messages",
+    "formula": "-notional/(orders+trade records+cancellations)/100; equal-weight across days for a month.",
+    "logic": "A larger value, closer to zero, means less value per message and greater relative message intensity.",
+    "status": "Example implemented",
+    "refs": [
+      "hjm"
+    ],
+    "frequency": "Daily to monthly",
+    "source": "Chapter 4, Table 4-1",
+    "caveat": "Interpret the algebraic sign consistently; this is not directly observed HFT-account participation."
+  },
+  {
+    "id": "rv",
+    "name": "Realized variance",
+    "category": "Volatility and efficiency",
+    "formula": "RV_day=sum(intraday_return^2); sqrt(RV_day*252) approximates annualized volatility.",
+    "logic": "Aggregates intraday price variation.",
+    "status": "Example implemented",
+    "refs": [
+      "corsi"
+    ],
+    "frequency": "Daily",
+    "source": "",
+    "caveat": "Sampling frequency affects microstructure noise. Variance and volatility are different units."
+  },
+  {
+    "id": "spread",
+    "name": "Relative effective spread",
+    "category": "Liquidity",
+    "formula": "2*abs(trade price-contemporaneous midpoint)/midpoint.",
+    "logic": "Measures the implicit cost of immediate execution.",
+    "status": "Research definition documented",
+    "refs": [
+      "hjm"
+    ],
+    "frequency": "Transaction level",
+    "source": "",
+    "caveat": "Align trade and quote timestamps."
+  },
+  {
+    "id": "order_imbalance",
+    "name": "Order-book imbalance",
+    "category": "Order messages",
+    "formula": "(bid depth-ask depth)/(bid depth+ask depth).",
+    "logic": "Order-book supply-demand imbalance is a candidate microstructure signal.",
+    "status": "Planned extension",
+    "refs": [
+      "hjm"
+    ],
+    "frequency": "Snapshot",
+    "source": "",
+    "caveat": "New extension, not claimed as a recovered factor from the missing original library."
+  }
+]

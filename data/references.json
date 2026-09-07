@@ -1,0 +1,38 @@
+[
+  {
+    "id": "hks",
+    "title": "Intraday Patterns in the Cross-section of Stock Returns",
+    "authors": "Steven L. Heston; Robert A. Korajczyk; Ronnie Sadka",
+    "year": "2010",
+    "url": "https://arxiv.org/abs/1005.3535",
+    "role": "原论文章节已引用",
+    "note": "以同一交易时段的跨日收益延续为研究出发点；窗口和可交易时间必须明确。"
+  },
+  {
+    "id": "lou",
+    "title": "A tug of war: Overnight versus intraday expected returns",
+    "authors": "Dong Lou; Christopher Polk; Spyros Skouras",
+    "year": "2019",
+    "url": "https://personal.lse.ac.uk/polk/research/TugOfWar.pdf",
+    "role": "原论文章节已引用",
+    "note": "区分日内与隔夜的收益形成，检验投资者异质性与跨时段反转。"
+  },
+  {
+    "id": "hjm",
+    "title": "Does Algorithmic Trading Improve Liquidity?",
+    "authors": "Terrence Hendershott; Charles M. Jones; Albert J. Menkveld",
+    "year": "2011",
+    "url": "https://doi.org/10.1111/j.1540-6261.2010.01624.x",
+    "role": "原论文章节已引用",
+    "note": "订单消息强度可作为算法交易活动代理。代理变量不等于带账户标签的真实 HFT，相关性不能自动解释为因果。"
+  },
+  {
+    "id": "corsi",
+    "title": "A Simple Approximate Long-Memory Model of Realized Volatility",
+    "authors": "Fulvio Corsi",
+    "year": "2009",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1365738",
+    "role": "本次补充方法出处",
+    "note": "HAR-RV 使用日、周、月尺度的已实现方差描述持续性；训练和预测按时间推进。"
+  }
+]

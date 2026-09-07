@@ -1,0 +1,129 @@
+[
+  {
+    "id": "same_slot_momentum",
+    "name": "同时段动量",
+    "category": "时段收益",
+    "formula": "mean(r[d−k, slot]), k=1…lookback；信号仅使用过去交易日同一时段。",
+    "logic": "规律性的交易需求可能在相同时段持续施加价格压力。",
+    "status": "研究定义已整理",
+    "refs": [
+      "hks"
+    ],
+    "frequency": "30 分钟",
+    "source": "用户第四章及前文研究概述",
+    "caveat": ""
+  },
+  {
+    "id": "cross_slot_reversal",
+    "name": "异时段反转",
+    "category": "时段收益",
+    "formula": "以已结束时段收益作为信号，检验下一异时段收益是否与之负相关。",
+    "logic": "不同投资者群体在不同时段接替交易，短暂价格压力可能回归。",
+    "status": "研究定义已整理",
+    "refs": [
+      "hks",
+      "lou"
+    ],
+    "frequency": "30 分钟",
+    "source": "",
+    "caveat": ""
+  },
+  {
+    "id": "intraday",
+    "name": "日内收益",
+    "category": "时段收益",
+    "formula": "C_t / O_t − 1；月度按 ∏(1+r_intra)−1 复合。",
+    "logic": "分离连续交易时段中的价格形成。",
+    "status": "示例已实现",
+    "refs": [
+      "lou"
+    ],
+    "frequency": "日度 → 月度",
+    "source": "",
+    "caveat": ""
+  },
+  {
+    "id": "overnight",
+    "name": "隔夜收益",
+    "category": "时段收益",
+    "formula": "O_t / C_(t−1) − 1；必须使用一致复权口径。",
+    "logic": "度量收盘至下一次开盘期间的信息与价格修正。",
+    "status": "示例已实现",
+    "refs": [
+      "lou"
+    ],
+    "frequency": "日度 → 月度",
+    "source": "",
+    "caveat": ""
+  },
+  {
+    "id": "tug_of_war",
+    "name": "日内—隔夜收益差",
+    "category": "时段收益",
+    "formula": "R_intra,month − R_overnight,month；不等于月度总收益。",
+    "logic": "衡量收益在时段间的分化，用于检验跨时段信息和交易摩擦。",
+    "status": "示例已实现",
+    "refs": [
+      "lou"
+    ],
+    "frequency": "月度",
+    "source": "",
+    "caveat": ""
+  },
+  {
+    "id": "at_proxy",
+    "name": "算法交易强度代理",
+    "category": "订单消息",
+    "formula": "−成交金额 / (委托数 + 成交记录数 + 撤单数) / 100；月度等权平均。",
+    "logic": "越接近 0（越大），单位消息成交金额越低，意味着消息相对更密集。",
+    "status": "示例已实现",
+    "refs": [
+      "hjm"
+    ],
+    "frequency": "日度 → 月度",
+    "source": "第四章表 4-1",
+    "caveat": "原文解释存在方向表述不一致，按代数定义解释；不是直接观测到的高频账户占比。"
+  },
+  {
+    "id": "rv",
+    "name": "已实现方差",
+    "category": "波动与效率",
+    "formula": "RV_day = Σ r_intraday²；sqrt(RV_day × 252) 是年化波动率近似。",
+    "logic": "汇总日内价格变动；采样频率影响微观结构噪声。",
+    "status": "示例已实现",
+    "refs": [
+      "corsi"
+    ],
+    "frequency": "日度",
+    "source": "",
+    "caveat": ""
+  },
+  {
+    "id": "spread",
+    "name": "相对有效价差",
+    "category": "流动性",
+    "formula": "2 × |成交价 − 同时点中间价| / 中间价。",
+    "logic": "衡量立即成交的隐含成本。",
+    "status": "研究定义已整理",
+    "refs": [
+      "hjm"
+    ],
+    "frequency": "逐笔",
+    "source": "",
+    "caveat": ""
+  },
+  {
+    "id": "order_imbalance",
+    "name": "订单簿不平衡",
+    "category": "订单消息",
+    "formula": "(买侧深度 − 卖侧深度)/(买侧深度 + 卖侧深度)。",
+    "logic": "盘口供需失衡是候选微观结构信号，需要增量检验。",
+    "status": "扩展规划",
+    "refs": [
+      "hjm"
+    ],
+    "frequency": "快照",
+    "source": "",
+    "caveat": "本次补充的研究方向，未冒充已找到的原库因子。"
+  }
+]

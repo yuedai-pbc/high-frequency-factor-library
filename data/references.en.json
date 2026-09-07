@@ -1,0 +1,38 @@
+[
+  {
+    "id": "hks",
+    "title": "Intraday Patterns in the Cross-section of Stock Returns",
+    "authors": "Steven L. Heston; Robert A. Korajczyk; Ronnie Sadka",
+    "year": "2010",
+    "url": "https://arxiv.org/abs/1005.3535",
+    "role": "Research or method reference; see factor-level status",
+    "note": "Research link: Same-slot momentum; Cross-slot reversal. Local implementation status is recorded on individual factor cards; citation does not establish successful replication."
+  },
+  {
+    "id": "lou",
+    "title": "A tug of war: Overnight versus intraday expected returns",
+    "authors": "Dong Lou; Christopher Polk; Spyros Skouras",
+    "year": "2019",
+    "url": "https://personal.lse.ac.uk/polk/research/TugOfWar.pdf",
+    "role": "Research or method reference; see factor-level status",
+    "note": "Research link: Cross-slot reversal; Intraday return; Overnight return; Intraday-minus-overnight return. Local implementation status is recorded on individual factor cards; citation does not establish successful replication."
+  },
+  {
+    "id": "hjm",
+    "title": "Does Algorithmic Trading Improve Liquidity?",
+    "authors": "Terrence Hendershott; Charles M. Jones; Albert J. Menkveld",
+    "year": "2011",
+    "url": "https://doi.org/10.1111/j.1540-6261.2010.01624.x",
+    "role": "Research or method reference; see factor-level status",
+    "note": "Research link: Algorithmic-trading activity proxy; Relative effective spread; Order-book imbalance. Local implementation status is recorded on individual factor cards; citation does not establish successful replication."
+  },
+  {
+    "id": "corsi",
+    "title": "A Simple Approximate Long-Memory Model of Realized Volatility",
+    "authors": "Fulvio Corsi",
+    "year": "2009",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1365738",
+    "role": "Research or method reference; see factor-level status",
+    "note": "Research link: Realized variance. Local implementation status is recorded on individual factor cards; citation does not establish successful replication."
+  }
+]
