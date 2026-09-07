@@ -4,7 +4,7 @@
 
 Steven L. Heston; Robert A. Korajczyk; Ronnie Sadka; 2010.
 
-Research link: Same-slot momentum; Cross-slot reversal. Local implementation status is recorded on individual factor cards; citation does not establish successful replication.
+Starts from return continuation across days in the same trading slot. Formation windows and executable trading times must be explicit.
 
 [Paper / source](https://arxiv.org/abs/1005.3535)
 
@@ -12,7 +12,7 @@ Research link: Same-slot momentum; Cross-slot reversal. Local implementation sta
 
 Dong Lou; Christopher Polk; Spyros Skouras; 2019.
 
-Research link: Cross-slot reversal; Intraday return; Overnight return; Intraday-minus-overnight return. Local implementation status is recorded on individual factor cards; citation does not establish successful replication.
+Separates intraday and overnight return formation to examine investor heterogeneity and reversal across sessions.
 
 [Paper / source](https://personal.lse.ac.uk/polk/research/TugOfWar.pdf)
 
@@ -20,7 +20,7 @@ Research link: Cross-slot reversal; Intraday return; Overnight return; Intraday-
 
 Terrence Hendershott; Charles M. Jones; Albert J. Menkveld; 2011.
 
-Research link: Algorithmic-trading activity proxy; Relative effective spread; Order-book imbalance. Local implementation status is recorded on individual factor cards; citation does not establish successful replication.
+Order-message intensity can proxy algorithmic-trading activity. It is not actual HFT identified by account labels, and correlation does not automatically establish causation.
 
 [Paper / source](https://doi.org/10.1111/j.1540-6261.2010.01624.x)
 
@@ -28,6 +28,6 @@ Research link: Algorithmic-trading activity proxy; Relative effective spread; Or
 
 Fulvio Corsi; 2009.
 
-Research link: Realized variance. Local implementation status is recorded on individual factor cards; citation does not establish successful replication.
+HAR-RV describes persistence using daily, weekly and monthly realized-variance scales. Training and prediction proceed chronologically.
 
 [Paper / source](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1365738)

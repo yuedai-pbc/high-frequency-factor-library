@@ -8,10 +8,10 @@ Returns are decimals (1% = 0.01); costs are basis points (1 bp = 0.0001). Varian
 
 Require tick or consistent minute data, exchange and receipt timestamps, message definitions and historical sessions. Daily prices alone cannot support this budget.
 
-Align exchange and receipt timestamps, trading days, sessions and sampling slots.
+Distinguish call auctions, continuous trading and lunch breaks. Align trades, quotes and orders by timestamp; handle cancellations and duplicate messages.
 
 ## Applicability
 
-- The original standalone high-frequency library path is still missing.
-- The AT proxy is negative value per message; a larger value closer to zero means greater relative message intensity. It is not a directly observed HFT-account share.
-- Examples implement basic return and message operators, not a tick replay or production execution engine.
+- Nine is the number of entries currently organized on this website, not the size of the user's complete high-frequency library.
+- Some prose in the original chapter conflicts with the direction implied by its proxy formula. This website follows the formula.
+- Integration of the standalone library, tick replay and real transaction-cost tests remain pending.

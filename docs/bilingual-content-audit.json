@@ -1,0 +1,10 @@
+{
+  "repository": "high-frequency-factor-library",
+  "factor_pairs": 9,
+  "reference_pairs": 4,
+  "readme_section_pairs": 9,
+  "step_pairs": 4,
+  "input_field_pairs": 0,
+  "explicit_original_definition_records": 0,
+  "checks_passed": true
+}

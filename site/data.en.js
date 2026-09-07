@@ -137,41 +137,41 @@ window.LIBRARY_EN = {
   "metrics": [
     [
       "9",
-      "Catalog records"
+      "Current research entries"
     ],
     [
-      "4",
-      "References"
+      "30m",
+      "Session research granularity"
     ],
     [
-      "0",
-      "Completed market-data backtests"
+      "L2",
+      "Target data level"
     ]
   ],
   "summary": "Study intraday and overnight returns, recurring trading slots, message intensity and execution frictions.",
   "scope": "Nine research entries assembled from the supplied chapter and research summary. The independent original high-frequency library has not been located; these entries are not a complete migration.",
   "steps": [
     [
-      "Step 1",
-      "Align exchange and receipt timestamps, trading days, sessions and sampling slots."
+      "Reconstruct trading time",
+      "Distinguish call auctions, continuous trading and lunch breaks. Align trades, quotes and orders by timestamp; handle cancellations and duplicate messages."
     ],
     [
-      "Step 2",
-      "Construct session returns and message-based activity measures from compatible windows; separate proxies from actual labeled HFT participation."
+      "Define session features",
+      "Keep the same slot across trading days. End the formation window before predicting the next slot. Calculate intraday and overnight returns using consistent corporate-action adjustments."
     ],
     [
-      "Step 3",
-      "Compare same-slot persistence, cross-slot reversal, variance and liquidity after seasonal adjustment."
+      "Test mechanisms",
+      "Use message intensity as an algorithmic-trading proxy and study its relationship with liquidity and session reversals. Causal tests require separately justified identification assumptions."
     ],
     [
-      "Step 4",
-      "Use subsequent executable prices and transaction costs; test incremental information under rolling and grouped holdouts."
+      "Simulate executable outcomes",
+      "Include bid/ask spreads, latency, impact and limit-order constraints. A-share backtests must check available holdings and T+1 restrictions."
     ]
   ],
   "limitations": [
-    "The original standalone high-frequency library path is still missing.",
-    "The AT proxy is negative value per message; a larger value closer to zero means greater relative message intensity. It is not a directly observed HFT-account share.",
-    "Examples implement basic return and message operators, not a tick replay or production execution engine."
+    "Nine is the number of entries currently organized on this website, not the size of the user's complete high-frequency library.",
+    "Some prose in the original chapter conflicts with the direction implied by its proxy formula. This website follows the formula.",
+    "Integration of the standalone library, tick replay and real transaction-cost tests remain pending."
   ],
   "engineering": {
     "bases": 8,
@@ -213,8 +213,8 @@ window.LIBRARY_EN = {
       "authors": "Steven L. Heston; Robert A. Korajczyk; Ronnie Sadka",
       "year": "2010",
       "url": "https://arxiv.org/abs/1005.3535",
-      "role": "Research or method reference; see factor-level status",
-      "note": "Research link: Same-slot momentum; Cross-slot reversal. Local implementation status is recorded on individual factor cards; citation does not establish successful replication."
+      "role": "Cited in the source chapter",
+      "note": "Starts from return continuation across days in the same trading slot. Formation windows and executable trading times must be explicit."
     },
     {
       "id": "lou",
@@ -222,8 +222,8 @@ window.LIBRARY_EN = {
       "authors": "Dong Lou; Christopher Polk; Spyros Skouras",
       "year": "2019",
       "url": "https://personal.lse.ac.uk/polk/research/TugOfWar.pdf",
-      "role": "Research or method reference; see factor-level status",
-      "note": "Research link: Cross-slot reversal; Intraday return; Overnight return; Intraday-minus-overnight return. Local implementation status is recorded on individual factor cards; citation does not establish successful replication."
+      "role": "Cited in the source chapter",
+      "note": "Separates intraday and overnight return formation to examine investor heterogeneity and reversal across sessions."
     },
     {
       "id": "hjm",
@@ -231,8 +231,8 @@ window.LIBRARY_EN = {
       "authors": "Terrence Hendershott; Charles M. Jones; Albert J. Menkveld",
       "year": "2011",
       "url": "https://doi.org/10.1111/j.1540-6261.2010.01624.x",
-      "role": "Research or method reference; see factor-level status",
-      "note": "Research link: Algorithmic-trading activity proxy; Relative effective spread; Order-book imbalance. Local implementation status is recorded on individual factor cards; citation does not establish successful replication."
+      "role": "Cited in the source chapter",
+      "note": "Order-message intensity can proxy algorithmic-trading activity. It is not actual HFT identified by account labels, and correlation does not automatically establish causation."
     },
     {
       "id": "corsi",
@@ -240,8 +240,8 @@ window.LIBRARY_EN = {
       "authors": "Fulvio Corsi",
       "year": "2009",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1365738",
-      "role": "Research or method reference; see factor-level status",
-      "note": "Research link: Realized variance. Local implementation status is recorded on individual factor cards; citation does not establish successful replication."
+      "role": "Additional method source",
+      "note": "HAR-RV describes persistence using daily, weekly and monthly realized-variance scales. Training and prediction proceed chronologically."
     }
   ]
 };

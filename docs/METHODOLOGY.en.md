@@ -2,21 +2,21 @@
 
 Nine research entries assembled from the supplied chapter and research summary. The independent original high-frequency library has not been located; these entries are not a complete migration.
 
-## Step 1
+## Reconstruct trading time
 
-Align exchange and receipt timestamps, trading days, sessions and sampling slots.
+Distinguish call auctions, continuous trading and lunch breaks. Align trades, quotes and orders by timestamp; handle cancellations and duplicate messages.
 
-## Step 2
+## Define session features
 
-Construct session returns and message-based activity measures from compatible windows; separate proxies from actual labeled HFT participation.
+Keep the same slot across trading days. End the formation window before predicting the next slot. Calculate intraday and overnight returns using consistent corporate-action adjustments.
 
-## Step 3
+## Test mechanisms
 
-Compare same-slot persistence, cross-slot reversal, variance and liquidity after seasonal adjustment.
+Use message intensity as an algorithmic-trading proxy and study its relationship with liquidity and session reversals. Causal tests require separately justified identification assumptions.
 
-## Step 4
+## Simulate executable outcomes
 
-Use subsequent executable prices and transaction costs; test incremental information under rolling and grouped holdouts.
+Include bid/ask spreads, latency, impact and limit-order constraints. A-share backtests must check available holdings and T+1 restrictions.
 
 ## Research protocol
 
